@@ -1,0 +1,107 @@
+body{
+  margin:0;
+  padding:0;
+  background:radial-gradient(circle at top, #071a33 0%, #05080f 45%, #020305 100%);
+  font-family:Arial, Helvetica, sans-serif;
+  color:white;
+}
+
+.container{
+  width:90%;
+  max-width:450px;
+  margin:40px auto;
+  background:rgba(8,18,35,0.92);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 0 25px rgba(0,140,255,0.35), inset 0 0 25px rgba(0,90,180,0.08); animation: glow 3s ease-in-out infinite;
+  text-align:center;
+}
+
+h1{
+  color:#29a9ff; text-shadow:0 0 12px rgba(0,160,255,0.8);
+  margin-bottom:10px;
+}
+
+.credit{\n  color:#55c7ff;\n  font-size:12px;\n  font-weight:bold;\n  letter-spacing:1px;\n  margin-top:-8px;\n  margin-bottom:20px;\n  text-shadow:0 0 8px rgba(0,170,255,0.7);\n  animation:pulse 2s infinite;\n}\n\n.desc{
+  color:#ccc;
+  margin-bottom:20px;
+}
+
+.upload-box{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+input[type="file"]{
+  background:#0d1a2b;
+  color:white;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #444;
+}
+
+button{
+  background:linear-gradient(135deg,#0879d9,#24b5ff); box-shadow:0 0 15px rgba(0,150,255,0.45);
+  border:none;
+  color:white;
+  padding:12px;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+button:hover{
+  background:linear-gradient(135deg,#0562b5,#1c9de8);
+}
+
+.progress{
+  width:100%;
+  height:12px;
+  background:#0d1a2b;
+  border-radius:20px;
+  overflow:hidden;
+  margin:20px 0;
+  display:none;
+}
+
+.progress-fill{
+  width:0%;
+  height:100%;
+  background:linear-gradient(135deg,#0879d9,#24b5ff); box-shadow:0 0 15px rgba(0,150,255,0.45);
+  transition:width 0.2s;
+}
+
+.result-box{
+  background:rgba(13,29,50,0.9); border:1px solid rgba(40,160,255,0.2);
+  border-radius:15px;
+  padding:18px;
+  text-align:left;
+  min-height:120px;
+  line-height:1.5;
+}
+
+.safe{
+  color:#00ff7b;
+  font-weight:bold;
+}
+
+.warning{
+  color:#ff4444;
+  font-weight:bold;
+}
+
+.info{
+  color:#ffb347;
+  font-weight:bold;
+}
+
+@keyframes glow{
+  0%,100%{transform:translateY(0); box-shadow:0 0 25px rgba(0,140,255,0.35), inset 0 0 25px rgba(0,90,180,0.08);}
+  50%{transform:translateY(-3px); box-shadow:0 0 38px rgba(0,170,255,0.55), inset 0 0 30px rgba(0,120,220,0.12);}
+}
+@keyframes pulse{
+  0%,100%{opacity:.75}
+  50%{opacity:1}
+}
